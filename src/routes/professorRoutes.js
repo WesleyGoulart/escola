@@ -11,6 +11,4 @@ router.put('/:id', loginRequired, professorController.update);
 router.get('/:id', professorController.show);
 router.delete('/:id', loginRequired, professorController.delete);
 
-router.get('/', professorController.index);
-
 export default router;

@@ -15,6 +15,7 @@ class ProfessorController {
 
       return res.json(professor);
     } catch (e) {
+      console.log(e);
       return res.status(400).json({
         errors: e.errors.map((err) => err.message),
       });
@@ -64,7 +65,7 @@ class ProfessorController {
 
       if (!professor) {
         return res.status(400).json({
-          errors: ['Aluno não existe'],
+          errors: ['Professor não existe'],
         });
       }
 
@@ -91,7 +92,7 @@ class ProfessorController {
 
       if (!professor) {
         return res.status(400).json({
-          errors: ['Aluno não existe'],
+          errors: ['Professor não existe'],
         });
       }
 

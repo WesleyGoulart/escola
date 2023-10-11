@@ -1,6 +1,6 @@
 import Sequelize, { Model } from 'sequelize';
 
-export default class Aluno extends Model {
+export default class Professor extends Model {
   static init(sequelize) {
     super.init({
       nome: {
@@ -55,12 +55,9 @@ export default class Aluno extends Model {
         },
       },
     }, {
+      tableName: 'professores',
       sequelize,
     });
     return this;
-  }
-
-  static associate(models) {
-    this.hasMany(models.Foto, { foreignKey: 'aluno_id' });
   }
 }
